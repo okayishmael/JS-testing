@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Testing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="main-content">
+        <section>
+            <div class="container">
+                <h1>Welcome to my JavaScript testing page</h1>
+                <p>This content is only available to users who are coder lol.</p>
+            </div>
+        </section>
+
+        <!--  <section>
+       <div class="container">
+      <h1>Business Hours Dynamatically Displayed:</h1>
+      <p id="status"></p>
+         </div>
+      </section> -->
+
+        <!-- Random Messages -->
+
+        <section>
+            <div class="container">
+                <h1>Random Messages very time you refresh the page:</h1>
+                <p id="random-msg"></p>
+            </div>
+        </section>
+        <!-- Select a car  -->
+        <section>
+            <div class="container">
+
+                <label for="types-of-cars" id="cars-label">
+                    <h2>Select an car to display it's info. Using switch()</h2>
+                </label>
+                <select name="cars" id="types-of-cars" class="form-control" onchange="displayMessage()">
+                    <option id="flat" value="flat">Flat</option>
+                    <option id="saab" value="saab">Saab</option>
+                    <option id="bmw" value="bmw">BMW</option>
+                    <option id="benz" value="benz">Benz</option>
+                    <option id="honda" value="honda">Honda</option>
+                </select>
+                <p id="selected-car-info"></p>
+            </div>
+        </section>
+        <!--Get discount-->
+        <section>
+            <div class="container">
+
+                <h2>Get 20% of a $150 purchase.</h2>
+                <p id="discount-stage"></p>
+
+                <div class="form">
+                    <input id="discount-demo" type="text" placeholder="Enter 20 to get discount">
+                    <button onclick="calculateDiscount()" class=" btn btn-block">Submit</button>
+
+                </div>
+
+            </div>
+        </section>
+        <!--Get discount-->
+        <section>
+            <div class="container">
+
+                <h2> Use <strong>bday20</strong> to get 20% of a $2000 purchase.</h2>
+                <p id="discount-stage2"></p>
+
+                <div class="form">
+                    <input id="discount-demo2" type="text" placeholder="Enter discount code">
+                    <button onclick="birthdayDiscount()" class=" btn btn-block">Submit</button>
+                    <p>Once you've submitted your name and the greeting displayed, refresh the browser to submit again.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+        <!-- Select a country  -->
+        <section>
+            <div class="container">
+                <h2> Select a Country to get capital.</h2>
+                <select id="countrySelect" class="form-control">
+                    <option value="Liberia">Liberia</option>
+                    <option value="Ghana">Ghana</option>
+                    <option value="Senegal">Senegal</option>
+                    <!-- ... more options -->
+                </select>
+
+                <div id="capitalDisplay"></div>
+            </div>
+        </section>
+        <!--Form that multiplies 2 numbers-->
+        <section>
+            <div class="container">
+                <!--  The heading-->
+                <h2>Enter 2 numbers to be multiplied.</h2>
+                <!-- This is where the answer will be displayed-->
+                <p id="answer-stage"></p>
+                <!--Div that holds the two input fields  -->
+                <div class="flex-div">
+                    <input id="num1" type="number" value="number" placeholder="Enter a number">
+                    <input id="num2" type="number" value="number" placeholder="Enter a number">
+                </div>
+                <!--the button  -->
+                <button class="btn btn-lg btn-block" onclick="multiplyInput()">Multiply</button>
+            </div>
+        </section>
+
+        <!--Form that greets user based on name entered-->
+        <section>
+            <div class="container">
+
+                <h2>Greeting based on the time of the day.</h2>
+                <p id="stage"></p>
+
+                <div class="form">
+                    <input id="nameEntered" type="text" placeholder="Enter your name">
+                    <button onclick="send()" class=" btn btn-block">Submit</button>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Accessing objects -->
+
+        <section>
+            <div class="container">
+
+                <h1>Client Side Validation : Demo Card Info</h1>
+                <form class="form" onsubmit="validateForm(event)">
+
+                    <div class="card-num-group">
+
+                        <label for="cardnumber" class="form-label">Card Number</label>
+
+                        <input type="text" class="card-input form-control" name="cardnumber" id="cardnumber" required
+                            minlength="16" maxlength="16" placeholder="Enter 16-digit card number" />
+
+                        <div id="cardnumber-error" class="error-message" style="color: red;"></div>
+                        <!-- Error message for card number -->
+
+                    </div>
+
+                    <div class="card-holder-group">
+
+                        <label for="cardHolder" class="form-label">Card Holder</label>
+
+                        <input type="text" class="card-input form-control" id="cardHolder" required>
+
+                        <div id="cardHolder-error" class="error-message" style="color: red;"></div>
+                        <!-- Error message for card holder -->
+
+                    </div>
+
+                    <div class="exp-date-form">
+
+                        <div class="exp-date-year">
+
+                            <label for="exp-date" class="form-label">Expiration Date</label>
+
+                            <div class="exp-dates">
+
+                                <select name="months" id="exp-month" class="exp-date form-control" required>
+
+                                    <option disabled selected value>Month</option>
+
+                                    <option value="01">01</option>
+
+                                    <option value="02">02</option>
+
+                                    <option value="03">03</option>
+
+                                    <option value="04">04</option>
+
+                                    <option value="05">05</option>
+
+                                    <option value="06">06</option>
+
+                                    <option value="07">07</option>
+
+                                    <option value="08">08</option>
+
+                                    <option value="09">09</option>
+
+                                    <option value="10">10</option>
+
+                                    <option value="11">11</option>
+
+                                    <option value="12">12</option>
+
+                                </select>
+
+                                <select name="years" id="exp-year" class="exp-date form-control" required>
+
+                                    <option disabled selected value>Year</option>
+
+                                    <option value="2024">2024</option>
+
+                                    <option value="2025">2025</option>
+
+                                    <option value="2026">2026</option>
+
+                                    <option value="2027">2027</option>
+
+                                    <option value="2028">2028</option>
+
+                                    <option value="2029">2029</option>
+
+                                    <option value="2030">2030</option>
+
+                                </select>
+
+                            </div>
+
+                            <div id="exp-date-error" class="error-message" style="color: red;"></div>
+                            <!-- Error message for expiration date -->
+
+                        </div>
+
+                    </div>
+
+                    <div class="cvv-group">
+
+                        <label for="cvv" class="form-label">CVV</label>
+
+                        <input type="text" class="form-input form-control" id="cvvnumber" required>
+
+                        <div id="cvv-error" class="error-message" style="color: red;"></div>
+                        <!-- Error message for CVV -->
+
+                    </div>
+
+                    <div>
+
+                        <button class="submit">Submit</button>
+
+                    </div>
+
+                </form>
+            </div>
+        </section>
+        </main>
+        <script src="script.js"></script>
+</body>
+
+</html>
